@@ -1,0 +1,228 @@
+{
+ "object": "Module",
+ "userkey": "DemoAIAddons",
+ "item": {
+  "mdl_name": "DemoAIAddons",
+  "mdl_prefix": "demo",
+  "mdl_version": "0.1",
+  "mdl_type": "X",
+  "mdl_icon": null,
+  "mdl_url": "{\n    \"origin\": {\"uri\": \"https://github.com/simplicitesoftware/module-demo-ai\"},\n    \"type\": \"git\"\n}",
+  "mdl_comment": "This module contains the following addons for the demo order management application.:\n\n* A ai addon for display AI tools"
+ },
+ "links": [
+  {
+   "object": "ModuleLink",
+   "label": "Dependency",
+   "icon": "img/system/module",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "ModuleLink",
+     "userkey": "AIBySimplicite~DemoAIAddons",
+     "item": {
+      "mdk_parent_id__mdl_name": "AIBySimplicite",
+      "row_module_id__mdl_name": "DemoAIAddons",
+      "mdk_cascad": "C",
+      "mdk_order": null
+     }
+    },
+    {
+     "object": "ModuleLink",
+     "userkey": "Demo~DemoAIAddons",
+     "item": {
+      "mdk_parent_id__mdl_name": "Demo",
+      "row_module_id__mdl_name": "DemoAIAddons",
+      "mdk_cascad": "C",
+      "mdk_order": 1
+     }
+    }
+   ]
+  },
+  {
+   "object": "View",
+   "label": "Views",
+   "icon": "img/system/view",
+   "field": "row_module_id",
+   "list": [{
+    "object": "View",
+    "userkey": "demoAIVue",
+    "item": {
+     "viw_name": "demoAIVue",
+     "viw_type": "V",
+     "viw_ui": "<div class=\"area\" data-area=\"1\"><\/div>",
+     "viw_order": 5,
+     "viw_icon": "fas/robot",
+     "row_module_id__mdl_name": "DemoAIAddons"
+    }
+   }]
+  },
+  {
+   "object": "Group",
+   "label": "Groups",
+   "icon": "img/system/group",
+   "field": "row_module_id",
+   "list": [{
+    "object": "Group",
+    "userkey": "DEMOAI_METTIER",
+    "item": {
+     "grp_name": "DEMOAI_METTIER",
+     "grp_comment": null,
+     "grp_type": ["G"],
+     "grp_parent_id__grp_name": null,
+     "grp_home_id__viw_name": null,
+     "row_module_id__mdl_name": "DemoAIAddons"
+    }
+   }]
+  },
+  {
+   "object": "Profile",
+   "label": "Profiles",
+   "icon": "img/system/profile",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Profile",
+     "userkey": "DEMO_ADMIN~DEMOAI_METTIER",
+     "item": {
+      "prf_profile_id__grp_name": "DEMO_ADMIN",
+      "prf_group_id__grp_name": "DEMOAI_METTIER",
+      "row_module_id__mdl_name": "DemoAIAddons"
+     }
+    },
+    {
+     "object": "Profile",
+     "userkey": "DEMOAI_METTIER~AI_METIER",
+     "item": {
+      "prf_profile_id__grp_name": "DEMOAI_METTIER",
+      "prf_group_id__grp_name": "AI_METIER",
+      "row_module_id__mdl_name": "DemoAIAddons"
+     }
+    }
+   ]
+  },
+  {
+   "object": "Map",
+   "label": "Main menu",
+   "icon": "img/system/main_menu",
+   "field": "row_module_id",
+   "list": [{
+    "object": "Map",
+    "userkey": "DemoDomain~ViewSimple(demoAIVue)~69995",
+    "item": {
+     "map_domain_id__obd_name": "DemoDomain",
+     "map_object_id__obj_name": null,
+     "map_process_id__pcs_name": null,
+     "map_object": {
+      "item": {"viw_name": "demoAIVue"},
+      "icon": "img/system/view",
+      "label": "Simple view",
+      "userkeylabel": "demoAIVue",
+      "object": "ViewSimple"
+     },
+     "map_order": 69995,
+     "map_ext": false,
+     "row_module_id__mdl_name": "DemoAIAddons"
+    }
+   }]
+  },
+  {
+   "object": "ViewItem",
+   "label": "View areas",
+   "icon": "object",
+   "field": "row_module_id",
+   "list": [{
+    "object": "ViewItem",
+    "userkey": "demoAIVue~1",
+    "item": {
+     "vwi_view_id__viw_name": "demoAIVue",
+     "vwi_position": 1,
+     "vwi_type": "E",
+     "vwi_title": true,
+     "vwi_research_id__rch_name": null,
+     "vwi_research_id__rch_object_id__obo_name": null,
+     "vwi_research_id__rch_user_id__usr_login": null,
+     "vwi_search_spec": null,
+     "vwi_lov_code": null,
+     "vwi_show": null,
+     "vwi_url": "[EXPR:HTMLTool.getExternalObjectURL(\"AIMetricsChat?module=Demo\")]",
+     "vwi_image": null,
+     "vwi_subview_id__viw_name": null,
+     "vwi_treeview_id__trv_name": null,
+     "vwi_crosstab_id__ctb_name": null,
+     "vwi_printtmpl_id__prt_name": null,
+     "vwi_printtmpl_id__prt_lang": null,
+     "row_module_id__mdl_name": "DemoAIAddons"
+    }
+   }]
+  },
+  {
+   "object": "TranslateView",
+   "label": "View translation",
+   "icon": "img/system/translation",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "TranslateView",
+     "userkey": "View(demoAIVue)~ENU",
+     "item": {
+      "tsl_object": {
+       "item": {"viw_name": "demoAIVue"},
+       "icon": "img/system/view",
+       "label": "View",
+       "userkeylabel": "demoAIVue",
+       "object": "View"
+      },
+      "tsl_lang": "ENU",
+      "tsl_value": "AI Assistant",
+      "tsl_help": null,
+      "row_module_id__mdl_name": "DemoAIAddons"
+     }
+    },
+    {
+     "object": "TranslateView",
+     "userkey": "View(demoAIVue)~FRA",
+     "item": {
+      "tsl_object": {
+       "item": {"viw_name": "demoAIVue"},
+       "icon": "img/system/view",
+       "label": "View",
+       "userkeylabel": "demoAIVue",
+       "object": "View"
+      },
+      "tsl_lang": "FRA",
+      "tsl_value": "Assistant IA",
+      "tsl_help": null,
+      "row_module_id__mdl_name": "DemoAIAddons"
+     }
+    }
+   ]
+  },
+  {
+   "object": "Permission",
+   "label": "Permissions",
+   "icon": "img/system/state_transition_permission",
+   "field": "row_module_id",
+   "list": [{
+    "object": "Permission",
+    "userkey": "DEMOAI_METTIER~ViewSimple(demoAIVue)~",
+    "item": {
+     "prm_group_id__grp_name": "DEMOAI_METTIER",
+     "prm_object": {
+      "item": {"viw_name": "demoAIVue"},
+      "icon": "img/system/view",
+      "label": "Simple view",
+      "userkeylabel": "demoAIVue",
+      "object": "ViewSimple"
+     },
+     "prm_perm": true,
+     "prm_upd": false,
+     "prm_req": false,
+     "prm_prop": null,
+     "prm_value": null,
+     "row_module_id__mdl_name": "DemoAIAddons"
+    }
+   }]
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+    "date": "2024-06-06 17:34:46",
+    "name": "DemoAIAddons",
+    "format": "json",
+    "files": ["DemoAIAddons.json"],
+    "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-demo-ai"}},
+    "version": "0.1",
+    "platform": "6.0.12"
+}
