@@ -92,10 +92,10 @@
     },
     {
      "object": "Profile",
-     "userkey": "DEMOAI_METTIER~AI_METIER",
+     "userkey": "DEMOAI_METTIER~AI_BUSINESS",
      "item": {
       "prf_profile_id__grp_name": "DEMOAI_METTIER",
-      "prf_group_id__grp_name": "AI_METIER",
+      "prf_group_id__grp_name": "AI_BUSINESS",
       "row_module_id__mdl_name": "DemoAIAddons"
      }
     }
